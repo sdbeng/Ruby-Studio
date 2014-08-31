@@ -1,9 +1,10 @@
-# def health(health_val)
-#  health = health_val
-# end
+def time
+	current_time = Time.new
+	current_time.strftime("%I:%M:%S")
+end
 
 def say_hello(name, health=100)
- "I'm #{name.capitalize} with a health of #{health}."
+ "I'm #{name.capitalize} with a health of #{health} as of #{time}."
 end
 
 #puts say_hello("larry", 60)
@@ -20,6 +21,24 @@ not accessible outside the method. In other words, name is not in scope.
 =end
 
 #Now, Set a Default Parameter Value for health if isn't passed in.
-puts say_hello("larry")
+#puts say_hello("larry")
 
 #Calling Other Methods
+=begin
+Remember that a method should do one thing well. Then, to get more complex
+behavior, you compose your program of many small methods. Methods can
+invoke other methods by simply calling the method name.
+=end
+
+#Now it includes the param time in the player's greeting.
+#See, I don't have to add another param to the method definition
+#I just need to call the time method inside the function body!
+puts say_hello("larry")
+
+
+
+
+
+
+
+
